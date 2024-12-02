@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тег picture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тег <code>&lt;picture&gt;</code> у дії</h1>
+
+
+    <div class="image-container">
+        <picture>
+            <source srcset="large.jpg" media="(min-width: 1024px)">
+            <source srcset="medium.jpg" media="(min-width: 768px)">
+            <source srcset="small.jpg" media="(max-width: 767px)">
+            <img src="fallback.jpg" alt="Адаптивне зображення природи">
+        </picture>
+        <p class="description">Це приклад адаптивного зображення природи, яке змінюється залежно від ширини екрана.</p>
+    </div>
+
+
+    <div class="image-container">
+        <picture>
+            <source srcset="icon.webp" type="image/webp">
+            <source srcset="icon.png" type="image/png">
+            <img src="icon.png" alt="Іконка у різних форматах">
+        </picture>
+        <p class="description">Іконка, яка завантажується у форматі WebP, якщо він підтримується браузером.</p>
+    </div>
+
+
+    <div class="image-container">
+        <picture>
+            <source srcset="retina.jpg" media="(min-resolution: 192dpi)">
+            <source srcset="standard.jpg">
+            <img src="fallback-standard.jpg" alt="Зображення для екранів Retina">
+        </picture>
+        <p class="description">Це приклад зображення з підтримкою високої роздільної здатності (Retina).</p>
+    </div>
+</body>
+</html>
