@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .svg-container {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        svg {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .circle-animation {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG Малюнок</h1>
+    <div class="svg-container">
+        <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+ 
+            <rect x="50" y="50" width="100" height="100" fill="#4caf50" stroke="#2e7d32" stroke-width="5" rx="15" />
+
+            <circle cx="300" cy="100" r="50" fill="#ff5722" stroke="#e64a19" stroke-width="5" class="circle-animation" />
+
+            <ellipse cx="150" cy="250" rx="60" ry="30" fill="#2196f3" stroke="#1565c0" stroke-width="3" />
+
+            <line x1="50" y1="300" x2="450" y2="300" stroke="#9c27b0" stroke-width="4" stroke-dasharray="10,5" />
+
+            <polygon points="200,350 250,280 300,350" fill="#ffeb3b" stroke="#fbc02d" stroke-width="3" />
+
+            <polyline points="350,200 400,250 450,200 500,250" fill="none" stroke="#00bcd4" stroke-width="3" />
+
+            <path d="M 100 200 C 150 100, 250 100, 300 200 S 450 300, 500 200" fill="none" stroke="#ff9800" stroke-width="3" />
+        </svg>
+    </div>
+</body>
+</html>
