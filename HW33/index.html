@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>WebP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Демонстрація оптимізації графіки</h1>
+    </header>
+    
+    <main>
+
+        <section class="image-demo">
+            <h2>Приклад зображення №1</h2>
+            <picture>
+                <source srcset="images/webp/image1.webp" type="image/webp">
+                <img src="images/originals/image1.jpg" alt="Оригінальне зображення">
+            </picture>
+            <p>Це зображення оптимізоване для WebP, але має резервну копію у форматі JPG.</p>
+        </section>
+
+     
+        <section class="image-demo">
+            <h2>Приклад зображення №2</h2>
+            <picture>
+                <source srcset="images/webp/image2.webp" type="image/webp">
+                <img src="images/originals/image2.png" alt="Оригінальне зображення">
+            </picture>
+            <p>Це зображення оптимізоване для WebP, але має резервну копію у форматі PNG.</p>
+        </section>
+    </main>
+</body>
+</html>

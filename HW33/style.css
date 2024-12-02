@@ -1,0 +1,35 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.image-demo {
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
