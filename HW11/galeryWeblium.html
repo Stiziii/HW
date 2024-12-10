@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анімована карусель</title>
+  <style>
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 300px;
+    }
+
+    .carousel img {
+      min-width: 100%;
+      transition: transform 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+  </div>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+    let index = 0;
+
+    setInterval(() => {
+      index++;
+      if (index >= carousel.children.length) {
+        index = 0;
+      }
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script>
+</body>
+</html>
